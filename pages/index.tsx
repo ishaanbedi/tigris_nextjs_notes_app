@@ -49,14 +49,14 @@ const Home: NextPage<Props> = ({ items }) => {
                   />
                 )}
               </div>
-              <ul className="divide-y divide-gray-200">
+              <ul className="divide-y divide-gray-200 bg-gray-100 rounded-md h-96 overflow-y-scroll">
                 {notesList
                   .filter((item) =>
                     item.title.toLowerCase().includes(searchTerm.toLowerCase())
                   )
                   .map((item, index) => (
                     <Link href={`/note/${item.id}`} key={item.id}>
-                      <li className="py-4 hover:bg-gray-100 cursor-pointer p-3">
+                      <li className="py-4 hover:bg-gray-50 cursor-pointer p-3">
                         <h3 className="text-lg font-medium text-gray-900 mb-2">
                           {index + 1}. {item.title}
                         </h3>
